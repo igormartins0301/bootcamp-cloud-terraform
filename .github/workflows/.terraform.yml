@@ -23,17 +23,3 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::443370712526:role/bootcamp-cloud-terraform
           aws-region: us-east-1
-
-      - name: Instalar Terraform
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: latest
-
-      - name: Inicializar Terraform
-        run: terraform init
-
-      - name: Planejar Terraform
-        run: terraform plan
-
-      - name: Aplicar Terraform
-        run: terraform apply -auto-approve
