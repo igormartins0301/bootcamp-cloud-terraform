@@ -12,7 +12,7 @@ provider "aws" {
   region = "us-east-1"
 
   assume_role {
-    role_arn     = "arn:aws:iam::443370712526:role/bootcamp-cloud-terraform"
+    role_arn     = "arn:aws:iam::443370712526:role/role-bootcamp-cloud-terraform"
     session_name = "github-actions"
   }
 }
