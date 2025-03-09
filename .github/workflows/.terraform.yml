@@ -17,9 +17,9 @@ jobs:
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
-        
+
       - name: Instalar Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: latest
 
@@ -27,6 +27,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::443370712526:role/role-bootcamp-cloud-terraform
+          role-session-name: github-actions
           aws-region: us-east-1
 
       - name: Inicializar Terraform
